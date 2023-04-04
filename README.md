@@ -1,6 +1,6 @@
  <h1>Stack Overflow Clone</h1>
     <p>Welcome to my Stack Overflow clone website! This project is a replica of the famous Q&amp;A website Stack Overflow, built using modern web development technologies such as React, Node.js, and MongoDB.</p>
-
+<!-- / -->
     <h2>Features</h2>
     <ul>
       <li>User authentication and authorization system with password encryption</li>
@@ -12,7 +12,7 @@
       <li>Sorting questions based on date, views, and votes</li>
       <li>Responsive design for mobile devices</li>
     </ul>
-
+<!-- / -->
     <h2>Technologies Used</h2>
     <ul>
       <li>React</li>
@@ -25,7 +25,7 @@
       <li>Font Awesome</li>
       <li>Google Fonts</li>
     </ul>
-
+<!-- / -->
     <h2>Getting Started</h2>
     <p>To get started with the project, you need to have Node.js and MongoDB installed on your computer. Clone the repository, navigate to the project directory and run the following commands:</p>
     <pre>
@@ -50,7 +50,6 @@ npm run client
     
 
     <h2>Screenshots</h2>
-    <h3>Home page</h3>
+<!--     <h3>Home page</h3> -->
     <!-- add image here -->
-    <h3>Question details page</h3>
-    <!-- add image here -->
+ 
