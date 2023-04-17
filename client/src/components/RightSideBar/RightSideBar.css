@@ -19,11 +19,9 @@
   font-family: var(--font-poppins);
 }
 .right-sidebar {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  margin: 0 0 15px 24px;
-  width: 300px;
+  margin: 0 0 15px 0;
+  width: 30vw;
+  max-width: 300px;
 }
 .right-sidebar-div-1 .right-sidebar-div-2 {
   align-items: center;
@@ -58,4 +56,5 @@
   color: #39739d;
   font-size: 0.7rem;
   padding: 5px;
+  font-family: var(--font-poppins);
 }

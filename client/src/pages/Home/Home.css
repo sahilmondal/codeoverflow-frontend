@@ -11,8 +11,10 @@
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
-  border: 1px solid var(--black-500);
+  border: 0.5px solid var(--black-300);
   border-top: none;
   border-bottom: none;
+  border-right: none;
   position: relative;
+  gap: 16px;
 }

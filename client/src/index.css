@@ -4,6 +4,14 @@
   box-sizing: border-box;
   outline: none;
 }
+html {
+  scroll-behavior: smooth;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+}
 :root {
   --orange-050: hsl(27, 100%, 97%);
   --orange-100: hsl(27, 95%, 90%);
@@ -43,4 +51,5 @@
   --black-900: hsl(210, 8%, 5%);
   --font-poppins: "Poppins", sans-serif;
   --font-Montserrat: "Montserrat", sans-serif;
+  --sidebar-bg: #fbf3d5;
 }
