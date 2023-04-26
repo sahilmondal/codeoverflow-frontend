@@ -24,6 +24,11 @@ html {
   --orange-800: hsl(27, 87%, 35%);
   --orange-900: hsl(27, 80%, 30%);
   --orange-500: hsl(27, 90%, 50%);
+  --green-400: hsl(140, 40%, 55%);
+  --green-500: hsl(140, 40%, 47%);
+  --green-600: hsl(140, 40%, 40%);
+  --green-700: hsl(140, 41%, 31%);
+  --green-800: hsl(140, 40%, 27%);
   --hover-color: #bdbdbd;
   --input-color: #e4e4e4;
   --nav-shadow: #d2d2d2;
@@ -34,6 +39,16 @@ html {
   --blue-700: hsl(209, 100%, 37.5%);
   --blue-800: hsl(209, 100%, 32%);
   --blue-900: hsl(209, 100%, 26%);
+  --yellow-050: hsl(47, 87%, 94%);
+  --yellow-100: hsl(47, 83%, 91%);
+  --yellow-200: hsl(47, 65%, 84%);
+  --yellow-300: hsl(47, 69%, 69%);
+  --yellow-400: hsl(47, 79%, 58%);
+  --yellow-500: hsl(47, 73%, 50%);
+  --yellow-600: hsl(47, 76%, 46%);
+  --yellow-700: hsl(47, 79%, 40%);
+  --yellow-800: hsl(47, 82%, 34%);
+  --yellow-900: hsl(47, 84%, 28%);
   --black-025: hsl(210, 8%, 97.5%);
   --black-050: hsl(210, 8%, 95%);
   --black-075: hsl(210, 8%, 90%);
@@ -52,4 +67,5 @@ html {
   --font-poppins: "Poppins", sans-serif;
   --font-Montserrat: "Montserrat", sans-serif;
   --sidebar-bg: #fbf3d5;
+  --main-bg: var(--yellow-050);
 }

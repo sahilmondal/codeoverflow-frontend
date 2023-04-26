@@ -54,39 +54,51 @@ const QuestionList = () => {
 
   return (
     <>
-      {data.map((question) => (
-        <div className="question-card">
-          <div className="question-card-container-1">
-            <div className="question-card-votes">
-              <p>{question.voteCount} votes</p>
+      {data == null ? (
+        <h1>Loading...</h1>
+      ) : (
+        data.map((question) => (
+          <div className="question-card">
+            <div className="question-card-container-1">
+              <div className="question-card-votes">
+                <p>{question.voteCount} votes</p>
+              </div>
+              <div className="question-card-views">
+                <p>{question.views} views</p>
+              </div>
+              <div className="question-card-answers">
+                <p>
+                  <Link to={`/Answers/${question.id}`}>
+                    <button className="answer-btn">
+                      {question.answersCount} answers
+                    </button>
+                  </Link>
+                </p>
+              </div>
             </div>
-            <div className="question-card-views">
-              <p>{question.views} views</p>
-            </div>
-            <div className="question-card-answers">
-              <p>{question.answersCount} answers</p>
-            </div>
-          </div>
 
-          <div className="question-card-main">
-            <Link to={`/questions/${question.id}`} key={question.id}>
-              <h3 className="question-card-title">{question.question}</h3>
-            </Link>
-            <div className="question-card-tags">
-              {question.tags.map((tag) => (
-                <div className="question-card-tag widget-tags-div">
-                  <p key={tag}>{tag}</p>
-                </div>
-              ))}
+            <div className="question-card-main">
+              <Link to={`/Questions/${question.id}`} key={question.id}>
+                <h3 className="question-card-title">{question.question}</h3>
+              </Link>
+              <div className="question-card-tags">
+                {question.tags.map((tag) => (
+                  <div className="question-card-tag widget-tags-div">
+                    <p key={tag}>
+                      <Link>{tag}</Link>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="question-card-publish">
+              <p className="question-card-publish-date">
+                asked on {question.publishDate}
+              </p>
             </div>
           </div>
-          <div className="question-card-publish">
-            <p className="question-card-publish-date">
-              <p>asked on {question.publishDate}</p>
-            </p>
-          </div>
-        </div>
-      ))}
+        ))
+      )}
     </>
   );
 };

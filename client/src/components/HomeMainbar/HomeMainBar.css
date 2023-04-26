@@ -1,6 +1,23 @@
 .question-container {
-  background-color: var(--sidebar-bg);
+  background-color: var(--main-bg);
+}
+.question-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 .main {
   width: 100%;
+  padding: 20px 0 0 0;
+  font-family: var(--font-poppins);
+}
+.main-headline {
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: var(--black-900);
+  padding-left: 16px;
+}
+.ask-button {
+  padding: 12px 6px;
 }

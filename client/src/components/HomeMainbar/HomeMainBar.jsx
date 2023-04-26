@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./HomeMainBar.css";
+import "../navbar/navbar.css";
 import QuestionList from "../QuestionsList/QuestionList";
 const HomeMainBar = () => {
   let location = useLocation();
@@ -13,6 +14,11 @@ const HomeMainBar = () => {
         ) : (
           <h1 className="main-headline">All Questions</h1>
         )}
+        <Link to="/AskQuestions">
+          <button className="ask-button avatar-btn login-btn">
+            Ask Question
+          </button>
+        </Link>
       </div>
       <div className="question-container">
         <QuestionList />
