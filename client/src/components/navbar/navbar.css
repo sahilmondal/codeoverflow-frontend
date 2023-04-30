@@ -113,6 +113,7 @@ form {
 .logout-btn {
   color: var(--orange-500);
   border: 1px solid var(--orange-500);
+  background-color: transparent;
 }
 .logout-btn:hover {
   background-color: var(--orange-500);

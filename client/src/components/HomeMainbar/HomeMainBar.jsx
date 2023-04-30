@@ -14,7 +14,7 @@ const HomeMainBar = () => {
         ) : (
           <h1 className="main-headline">All Questions</h1>
         )}
-        <Link to="/AskQuestions">
+        <Link to="/AskQuestion">
           <button className="ask-button avatar-btn login-btn">
             Ask Question
           </button>

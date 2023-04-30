@@ -5,7 +5,8 @@ import Search from "../../assets/search-icon.svg";
 import Avatar from "../../components/Avatar/Avatar";
 
 function navbar() {
-  var User = null;
+  let User = null;
+  let userLogo = null;
   return (
     <nav>
       <div className="navbar ">
@@ -33,7 +34,7 @@ function navbar() {
         ) : (
           <>
             <Link to="/">
-              <Avatar>M</Avatar>
+              <Avatar>{userLogo}</Avatar>
             </Link>
             <button className="nav-item logout-btn avatar-btn">Log out</button>
           </>
