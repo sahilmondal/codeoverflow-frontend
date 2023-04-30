@@ -46,7 +46,7 @@ npm run server
 # Run the React client only
 npm run client
 
-# Server runs on http://localhost:5173 and client on http://localhost:3000
+# client runs on http://localhost:5173
     
 <!--     / -->
 
