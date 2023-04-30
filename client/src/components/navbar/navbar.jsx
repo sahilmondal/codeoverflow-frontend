@@ -3,7 +3,7 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import Search from "../../assets/search-icon.svg";
 import Avatar from "../../components/Avatar/Avatar";
-
+import { Breakpoint } from "react-socks";
 function navbar() {
   let User = null;
   let userLogo = null;
@@ -13,15 +13,17 @@ function navbar() {
         <Link to="/" className="logo nav-item ">
           Code <span className="logo-bold nav-item">Overflow</span>
         </Link>
-        <Link to="/" className="nav-item nav-links">
-          About us
-        </Link>
-        <Link to="/" className="nav-item nav-links">
-          Products
-        </Link>
-        <Link to="/" className="nav-item nav-links">
-          For Teams
-        </Link>
+        <Breakpoint customQuery="(min-width:790px)">
+          <Link to="/" className="nav-item nav-links">
+            About us
+          </Link>
+          <Link to="/" className="nav-item nav-links">
+            Products
+          </Link>
+          <Link to="/" className="nav-item nav-links">
+            For Teams
+          </Link>
+        </Breakpoint>
 
         <form>
           <input type="text" className="form-input" placeholder="Search..." />

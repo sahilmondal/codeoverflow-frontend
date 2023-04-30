@@ -18,3 +18,8 @@
   position: relative;
   gap: 16px;
 }
+@media screen and (max-width: 576px) {
+  .home-container-2 {
+    width: 100%;
+  }
+}

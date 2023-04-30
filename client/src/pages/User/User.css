@@ -1,0 +1,8 @@
+.user-container {
+  border: 1px solid #d6d9dc;
+  box-sizing: border-box;
+  max-width: 1100px;
+  padding: 24px;
+  width: calc(100% - 164px);
+  font-family: var(--font-Montserrat);
+}

@@ -65,3 +65,8 @@
   color: var(--blue-800);
   font-size: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .question-card-publish {
+    bottom: 8px;
+  }
+}
