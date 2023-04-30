@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./navbar.css";
 import "./navbarMob.css";
 import { Link } from "react-router-dom";
-import Search from "../../assets/search-icon.svg";
-import Avatar from "../../components/Avatar/Avatar";
+import Search from "./../../assets/search-icon.svg";
+import Avatar from "./../../components/Avatar/Avatar";
 import { Breakpoint } from "react-socks";
-import LeftSideBar from "../LeftSideBar/LeftSideBar";
+import LeftSideBar from "./../LeftSideBar/LeftSideBar";
 
 function navbar() {
   let User = null;

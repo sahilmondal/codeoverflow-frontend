@@ -1,6 +1,6 @@
 import React from "react";
 import "./User.css";
-import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
+import LeftSideBar from "./../../components/LeftSideBar/LeftSideBar";
 import { Breakpoint } from "react-socks";
 
 const User = () => {

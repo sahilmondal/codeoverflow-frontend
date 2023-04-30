@@ -1,6 +1,6 @@
 import React from "react";
 import "./QuestionsList.css";
-import "../RightSideBar/RightSideBar.css";
+import "./../RightSideBar/RightSideBar.css";
 import { Link } from "react-router-dom";
 const QuestionList = () => {
   let data = [

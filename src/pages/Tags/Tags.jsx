@@ -1,6 +1,6 @@
 import React from "react";
 import "./Tags.css";
-import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
+import LeftSideBar from "./../../components/LeftSideBar/LeftSideBar";
 import { Breakpoint } from "react-socks";
 
 const Tags = () => {

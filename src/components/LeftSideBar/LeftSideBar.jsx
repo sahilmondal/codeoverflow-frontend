@@ -1,7 +1,7 @@
 import React from "react";
 import "./LeftSideBar.css";
 import { NavLink } from "react-router-dom";
-import globe from "../../assets/globe.svg";
+import globe from "./../../assets/globe.svg";
 const LeftSideBar = () => {
   return (
     <div className="sidebar">
