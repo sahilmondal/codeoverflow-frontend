@@ -1,4 +1,4 @@
- <h1>Stack Overflow Clone</h1>
+ <h1>Stack Overflow Clone Frontend</h1>
     <p>Welcome to my Stack Overflow clone website! This project is a replica of the famous Q&amp;A website Stack Overflow, built using modern web development technologies such as React, Node.js, and MongoDB.</p>
 <!-- / -->
     <h2>Features</h2>
@@ -52,5 +52,5 @@ npm run client
 
 <!--     <h2>Screenshots</h2> -->
 <!--     <h3>Home page</h3> -->
-    <!-- add image here -->
+   
  
