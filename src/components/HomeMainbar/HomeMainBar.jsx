@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./HomeMainBar.css";
 import "./../navbar/navbar.css";
-import QuestionList from "./../QuestionsList/QuestionList";
+import QuestionsList from "./../QuestionsList/QuestionsList";
 const HomeMainBar = () => {
   let location = useLocation();
 
@@ -21,7 +21,7 @@ const HomeMainBar = () => {
         </Link>
       </div>
       <div className="question-container">
-        <QuestionList />
+        <QuestionsList />
       </div>
     </div>
   );
