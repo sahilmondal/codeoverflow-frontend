@@ -9,5 +9,5 @@ export default defineConfig({
       include: "**/*.jsx",
     }),
   ],
-  base: "codeoverflow-frontend",
+  base: "/codeoverflow-frontend/",
 });
