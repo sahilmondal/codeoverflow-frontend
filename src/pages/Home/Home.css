@@ -1,0 +1,25 @@
+.home-container-1 {
+  display: flex;
+  box-sizing: border-box;
+  min-height: 100vh;
+  max-width: 1250px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.home-container-2 {
+  width: calc(100% - 164px);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  border: 0.5px solid var(--black-300);
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  position: relative;
+  gap: 16px;
+}
+@media screen and (max-width: 576px) {
+  .home-container-2 {
+    width: 100%;
+  }
+}
