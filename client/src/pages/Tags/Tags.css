@@ -38,3 +38,8 @@
   color: #323232;
   font-size: 14px;
 }
+@media screen and (max-width: 576px) {
+  .tag-container {
+    width: 100%;
+  }
+}

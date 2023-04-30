@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- Navbar and burger menu ------------------ */
+.mobileNav {
+  width: 100%;
+  height: 5em;
+  background-color: var(--home-bg);
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+.burger-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 24px;
+  height: 4px;
+  background-color: var(--black-800);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.menu {
+  width: 50%;
+  height: 100vh;
+  background-color: var(--home-bg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+  -webkit-transition: all 0.2s ea;
+  -moz-transition: all 0.2s ea;
+  -ms-transition: all 0.2s ea;
+  -o-transition: all 0.2s ea;
+}
+.menu .sidebar {
+  width: 100%;
+  margin-top: 80px;
+}
+
+/* ------------- sliding menu ------------------ */
+.hidden {
+  left: -100%;
+}
+
+.visible {
+  display: inherit;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0, 3px);
+  transition: ease-out 0.5s;
+  -webkit-transform: rotate(45deg) translate(0, 3px);
+  -moz-transform: rotate(45deg) translate(0, 3px);
+  -ms-transform: rotate(45deg) translate(0, 3px);
+  -o-transform: rotate(45deg) translate(0, 3px);
+  z-index: 2;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-3px, 6px);
+  transition: ease-out 0.5s;
+  -webkit-transform: rotate(135deg) translate(-3px, 6px);
+  -moz-transform: rotate(135deg) translate(-3px, 6px);
+  -ms-transform: rotate(135deg) translate(-3px, 6px);
+  -o-transform: rotate(135deg) translate(-3px, 6px);
+  z-index: 2;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  margin-top: 5px;
+}

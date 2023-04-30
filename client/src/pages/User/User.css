@@ -6,3 +6,8 @@
   width: calc(100% - 164px);
   font-family: var(--font-Montserrat);
 }
+@media screen and (max-width: 576px) {
+  .user-container {
+    width: 100%;
+  }
+}

@@ -68,4 +68,5 @@ html {
   --font-Montserrat: "Montserrat", sans-serif;
   --sidebar-bg: #fbf3d5;
   --main-bg: var(--yellow-050);
+  --home-bg: hsl(0deg 0% 100%);
 }

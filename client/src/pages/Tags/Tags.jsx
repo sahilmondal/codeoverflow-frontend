@@ -1,11 +1,15 @@
 import React from "react";
 import "./Tags.css";
 import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
+import { Breakpoint } from "react-socks";
 
 const Tags = () => {
   return (
     <div className="home-container-1">
-      <LeftSideBar />
+      <Breakpoint small up>
+        <LeftSideBar />
+      </Breakpoint>
+
       <div className="tag-container">
         <h1 class="tags-h1">Tags</h1>
         <p class="tags-p">

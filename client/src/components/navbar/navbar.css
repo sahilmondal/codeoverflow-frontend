@@ -25,6 +25,7 @@ nav {
 
 .nav-links {
   margin-right: 10px;
+  font-family: var(--font-poppins);
   padding: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -118,4 +119,14 @@ form {
 .logout-btn:hover {
   background-color: var(--orange-500);
   color: #fff;
+}
+@media screen and (max-width: 556px) {
+  .logo {
+    font-size: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .logo span {
+    font-size: 0.8rem;
+  }
 }
