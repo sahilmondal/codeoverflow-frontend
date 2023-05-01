@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./HomeMainBar.css";
 import "./../navbar/navbar.css";
-import QuestionsList from "./../QuestionsList/QuestionsList";
+import QuestionsList from "../QuestionsList/QuestionsList";
 const HomeMainBar = () => {
   let location = useLocation();
 
