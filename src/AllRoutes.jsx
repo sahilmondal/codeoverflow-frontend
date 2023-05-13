@@ -5,17 +5,36 @@ import Questions from "./pages/Questions/Questions";
 import Auth from "./pages/Auth/Auth";
 import AskQuestion from "./pages/AskQuestion/AskQuestion";
 import Tags from "./pages/Tags/Tags";
-import User from "./pages/User/User";
-
-const AllRoutes = () => {
+import Users from "./pages/Users/Users";
+import DisplayQuestion from "./Pages/Questions/DisplayQuestion";
+import UserProfile from "./Pages/UserProfile/UserProfile";
+const AllRoutes = ({ slideIn, handleSlideIn }) => {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route path="/Auth" element={<Auth />} />
       <Route path="/Questions" element={<Questions />} />
       <Route path="/AskQuestion" element={<AskQuestion />} />
-      <Route path="/Tags" element={<Tags />} />
-      <Route path="/User" element={<User />} />
+      <Route
+        path="/Tags"
+        element={<Tags slideIn={slideIn} handleSlideIn={handleSlideIn} />}
+      />
+      <Route
+        path="/Questions/:id"
+        element={
+          <DisplayQuestion slideIn={slideIn} handleSlideIn={handleSlideIn} />
+        }
+      />
+      <Route
+        path="/Users"
+        element={<Users slideIn={slideIn} handleSlideIn={handleSlideIn} />}
+      />
+      <Route
+        path="/Users/:id"
+        element={
+          <UserProfile slideIn={slideIn} handleSlideIn={handleSlideIn} />
+        }
+      />
     </Routes>
   );
 };
