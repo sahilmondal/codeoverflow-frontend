@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const QuestionList = () => {
   let data = [
     {
-      id: 1,
-      question: "What is the best programming language for beginners?",
+      _id: 1,
+      questionTitle: "What is the best programming language for beginners?",
       voteCount: 25,
       views: 1000,
       answersCount: 10,
@@ -14,8 +14,8 @@ const QuestionList = () => {
       tags: ["programming", "beginners", "languages"],
     },
     {
-      id: 2,
-      question: "How do I create a responsive website?",
+      _id: 2,
+      questionTitle: "How do I create a responsive website?",
       voteCount: 18,
       views: 800,
       answersCount: 5,
@@ -23,8 +23,8 @@ const QuestionList = () => {
       tags: ["web development", "responsive design", "CSS"],
     },
     {
-      id: 3,
-      question: "What are the best practices for unit testing?",
+      _id: 3,
+      questionTitle: "What are the best practices for unit testing?",
       voteCount: 15,
       views: 600,
       answersCount: 8,
@@ -32,8 +32,8 @@ const QuestionList = () => {
       tags: ["unit testing", "testing", "best practices"],
     },
     {
-      id: 4,
-      question: "How do I optimize my SQL queries for performance?",
+      _id: 4,
+      questionTitle: "How do I optimize my SQL queries for performance?",
       voteCount: 12,
       views: 500,
       answersCount: 7,
@@ -41,8 +41,8 @@ const QuestionList = () => {
       tags: ["SQL", "database", "performance"],
     },
     {
-      id: 5,
-      question:
+      _id: 5,
+      questionTitle:
         "What are the differences between agile and waterfall methodologies?",
       voteCount: 20,
       views: 700,
@@ -68,7 +68,7 @@ const QuestionList = () => {
               </div>
               <div className="question-card-answers">
                 <p>
-                  <Link to={`/Answers/${question.id}`}>
+                  <Link to={`/Answers/${question._id}`} key={question._id}>
                     <button className="answer-btn">
                       {question.answersCount} answers
                     </button>
@@ -78,8 +78,10 @@ const QuestionList = () => {
             </div>
 
             <div className="question-card-main">
-              <Link to={`/Questions/${question.id}`} key={question.id}>
-                <h3 className="question-card-title">{question.question}</h3>
+              <Link to={`/Questions/${question._id}`} key={question._id}>
+                <h3 className="question-card-title">
+                  {question.questionTitle}
+                </h3>
               </Link>
               <div className="question-card-tags">
                 {question.tags.map((tag) => (

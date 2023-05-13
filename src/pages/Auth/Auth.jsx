@@ -1,15 +1,43 @@
 import React, { useState } from "react";
 import "./Auth.css";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { signup, login } from "../../actions/auth";
 
 const Auth = () => {
   const [isSignup, setIsSignup] = useState(false);
+  const [name, setName] = useState("name");
+  const [email, setEmail] = useState("email");
+  const [password, setPassword] = useState("password");
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleSwitch = () => {
     setIsSignup(!isSignup);
+    setName("");
+    setEmail("");
+    setPassword("");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!email && !password) {
+      alert("Enter email and password");
+    }
+    if (isSignup) {
+      if (!name) {
+        alert("Enter a name to continue");
+      }
+      dispatch(signup({ name, email, password }, navigate));
+    } else {
+      dispatch(login({ email, password }, navigate));
+    }
   };
   return (
     <div className="wrapper">
       {isSignup && (
-        <div class="container text-wrapper">
+        <div className="container text-wrapper">
           <h1>
             Join the <span className="logo-bold">Code</span> Overflow community
           </h1>
@@ -27,28 +55,36 @@ const Auth = () => {
             Code <span className="logo-bold">Overflow</span>
           </h1>
         )}
-        <form className="auth-form">
+        <form className="auth-form" onSubmit={handleSubmit}>
           {isSignup && (
             <>
-              <label for="name">Display Name</label>
+              <label htmlFor="name">Display Name</label>
               <input
                 type="text"
                 name="name"
                 id="name"
                 placeholder="Donald Trump"
                 required
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
               />
             </>
           )}
-          <label for="username">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
-            name="username"
-            id="username"
+            name="email"
+            id="email"
+            value={email}
             placeholder="Someone@email.com"
             required
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
-          <label for="password">
+          <label htmlFor="password">
             {isSignup ? (
               "Password"
             ) : (
@@ -64,6 +100,10 @@ const Auth = () => {
             name="password"
             placeholder="Password"
             required
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
           {isSignup && (
             <>
