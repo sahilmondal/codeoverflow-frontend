@@ -2,8 +2,8 @@ import React from "react";
 
 import "../../App.css";
 import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
-import RightSidebar from "../../components/RightSidebar/RightSidebar";
-import HomeMainbar from "../../components/HomeMainbar/HomeMainbar";
+import RightSidebar from "../../components/RightSideBar/RightSideBar";
+import HomeMainbar from "../../components/HomeMainbar/HomeMainBar";
 import { Breakpoint } from "react-socks";
 
 const Questions = ({ slideIn, handleSlideIn }) => {
