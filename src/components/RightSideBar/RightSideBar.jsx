@@ -1,5 +1,5 @@
 import React from "react";
-import "./RightSidebar.css";
+import "./RightSideBar.css";
 import Widget from "./Widget";
 import WidgetTags from "./WidgetTags";
 
