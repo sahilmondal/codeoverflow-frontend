@@ -1,7 +1,7 @@
 import React from "react";
 import "./LeftSideBar.css";
 import { NavLink } from "react-router-dom";
-import Globe from "../../assets/Globe.svg";
+import Globe from "../../assets/globe.svg";
 
 const LeftSidebar = ({ slideIn, handleSlideIn }) => {
   const slideInStyle = {
