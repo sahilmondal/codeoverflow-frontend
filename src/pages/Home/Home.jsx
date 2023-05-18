@@ -3,7 +3,7 @@ import React from "react";
 import "../../App.css";
 import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
 import RightSidebar from "../../components/RightSideBar/RightSideBar";
-import HomeMainbar from "../../components/HomeMainbar/HomeMainbar";
+import HomeMainbar from "../../components/HomeMainbar/HomeMainBar";
 import { Breakpoint } from "react-socks";
 const Home = () => {
   return (
