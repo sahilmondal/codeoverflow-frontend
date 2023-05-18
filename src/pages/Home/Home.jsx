@@ -1,19 +1,20 @@
 import React from "react";
+
+import "../../App.css";
 import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
-import RightSideBar from "../../components/RightSideBar/RightSideBar";
-import HomeMainBar from "../../components/HomeMainbar/HomeMainBar";
+import RightSidebar from "../../components/RightSidebar/RightSidebar";
+import HomeMainbar from "../../components/HomeMainbar/HomeMainbar";
 import { Breakpoint } from "react-socks";
 const Home = () => {
   return (
     <div className="home-container-1">
-      <Breakpoint small up>
+      <Breakpoint customQuery="(min-width:630px)">
         <LeftSideBar />
       </Breakpoint>
+
       <div className="home-container-2">
-        <HomeMainBar />
-        <Breakpoint large up>
-          <RightSideBar />
-        </Breakpoint>
+        <HomeMainbar />
+        <RightSidebar />
       </div>
     </div>
   );

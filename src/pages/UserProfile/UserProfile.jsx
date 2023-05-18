@@ -4,8 +4,8 @@ import { useParams } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBirthdayCake, faPen } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
-
-import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
+import { Breakpoint } from "react-socks";
+import LeftSideBar from "../../components/LeftSideBar/LeftSideBar";
 import Avatar from "../../components/Avatar/Avatar";
 import EditProfileForm from "./EditProfileForm";
 import ProfileBio from "./ProfileBio";
@@ -20,7 +20,9 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
 
   return (
     <div className="home-container-1">
-      <LeftSidebar slideIn={slideIn} handleSlideIn={handleSlideIn} />
+      <Breakpoint customQuery="(min-width:630px)">
+        <LeftSideBar />
+      </Breakpoint>
       <div className="home-container-2">
         <section>
           <div className="user-details-container">
@@ -29,8 +31,8 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
                 backgroundColor="purple"
                 color="white"
                 fontSize="50px"
-                px="40px"
-                py="30px"
+                px="100px"
+                py="100px"
               >
                 {currentProfile?.name.charAt(0).toUpperCase()}
               </Avatar>

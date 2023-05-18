@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import "./Auth.css";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { signup, login } from "../../actions/auth";
 
+import "./Auth.css";
+import icon from "../../assets/icon.png";
+import AboutAuth from "./AboutAuth";
+import { signup, login } from "../../actions/auth";
 const Auth = () => {
   const [isSignup, setIsSignup] = useState(false);
-  const [name, setName] = useState("name");
-  const [email, setEmail] = useState("email");
-  const [password, setPassword] = useState("password");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -34,117 +36,74 @@ const Auth = () => {
       dispatch(login({ email, password }, navigate));
     }
   };
+
   return (
-    <div className="wrapper">
-      {isSignup && (
-        <div className="container text-wrapper">
-          <h1>
-            Join the <span className="logo-bold">Code</span> Overflow community
-          </h1>
-          <p>Get unstuck — ask a question</p>
-          <p>Unlock new privileges like voting and commenting</p>
-          <p>Save your favorite tags, filters, and jobs</p>
-          <p>Earn reputation and badges</p>
-          <p>Collaborate and share knowledge with a private group for FREE.</p>
-          <p>Get Stack Overflow for Teams free for up to 50 users.</p>
-        </div>
-      )}
-      <div className="container">
-        {!isSignup && (
-          <h1 className="logo ">
-            Code <span className="logo-bold">Overflow</span>
-          </h1>
-        )}
-        <form className="auth-form" onSubmit={handleSubmit}>
+    <section className="auth-section">
+      {isSignup && <AboutAuth />}
+      <div className="auth-container-2">
+        <img src={icon} alt="stack overflow" className="login-logo" />
+        <form onSubmit={handleSubmit}>
           {isSignup && (
-            <>
-              <label htmlFor="name">Display Name</label>
+            <label htmlFor="name">
+              <h4>Display Name</h4>
               <input
                 type="text"
-                name="name"
                 id="name"
-                placeholder="Donald Trump"
-                required
+                name="name"
                 value={name}
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
               />
-            </>
+            </label>
           )}
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={email}
-            placeholder="Someone@email.com"
-            required
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-          <label htmlFor="password">
-            {isSignup ? (
-              "Password"
-            ) : (
-              <div className="flex">
-                <p>Password</p>
-                <p className="forget-pw">Forget password?</p>
-              </div>
-            )}
+          <label htmlFor="email">
+            <h4>Email</h4>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
           </label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Password"
-            required
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
-          {isSignup && (
-            <>
-              <p className="requirments fade-col">
-                Passwords must contain at least eight characters, including at
-                least 1 letter and 1 number.
-              </p>
-
-              <label htmlFor="promo" className="promo">
-                <input type="checkbox" name="promo" id="promo" />
-                <p className="requirments">
-                  Opt-in to receive occasional product updates, user research
-                  invitations, company announcements, and digests.
+          <label htmlFor="password">
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <h4>Password</h4>
+              {!isSignup && (
+                <p style={{ color: "#007ac6", fontSize: "13px" }}>
+                  forgot password?
                 </p>
-              </label>
-            </>
-          )}
-
-          <button type="submit" className="auth-login-btn">
-            {!isSignup ? "Log in" : "Sign up"}
+              )}
+            </div>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+          </label>
+          <button type="submit" className="auth-btn">
+            {isSignup ? "Sign up" : "Log in"}
           </button>
-          {isSignup && (
-            <p className="requirments">
-              By clicking “Sign up”, you agree to our{" "}
-              <span className="text-blue">terms of service,privacy policy</span>{" "}
-              and cookie policy
-            </p>
-          )}
         </form>
-        <p className="auth-text">
-          {!isSignup ? "Don’t have an account?" : "Already have an account?"}
+        <p>
+          {isSignup ? "Already have an account?" : "Don't have an account?"}
           <button
-            type="submit"
-            className="handle-switch-btn login-btn"
+            type="button"
+            className="handle-switch-btn"
             onClick={handleSwitch}
           >
-            {isSignup ? "Log in" : "Sign up"}
+            {isSignup ? "Log in" : "sign up"}
           </button>
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

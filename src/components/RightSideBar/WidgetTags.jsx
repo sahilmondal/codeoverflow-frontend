@@ -1,26 +1,24 @@
 import React from "react";
-import "./RightSideBar.css";
 
 const WidgetTags = () => {
-  let tags = [
-    "javascript",
-    "python",
-    "c#",
-    "java",
-    "php",
-    "html",
-    "xml",
-    "json",
-    "xml",
+  const tags = [
+    "c",
     "css",
-    "php",
-    "sql",
+    "express",
+    "firebase",
+    "html",
+    "java",
+    "javascript",
+    "mern",
+    "mongodb",
     "mysql",
-    "mongodb",
-    "oracle",
-    "mongodb",
-    "redis",
+    "next.js",
+    "node.js",
+    "php",
+    "python",
+    "reactjs",
   ];
+
   return (
     <div className="widget-tags">
       <h4>Watched tags</h4>

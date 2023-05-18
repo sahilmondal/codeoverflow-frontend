@@ -132,13 +132,15 @@ const QuestionsDetails = () => {
                           >
                             <Avatar
                               backgroundColor="orange"
-                              px="8px"
-                              py="5px"
+                              px="30px"
+                              py="30px"
                               borderRadius="4px"
                             >
                               {question.userPosted.charAt(0).toUpperCase()}
                             </Avatar>
-                            <div>{question.userPosted}</div>
+                            <div className="user-name-div">
+                              {question.userPosted}
+                            </div>
                           </Link>
                         </div>
                       </div>

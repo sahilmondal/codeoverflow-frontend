@@ -1,60 +1,74 @@
-.right-sidebar-div-1,
+.right-sidebar {
+  float: right;
+  width: 300px;
+  margin: 40px 0px 15px 24px;
+  font-size: 15px;
+}
+
+.widget {
+  margin-top: 10px;
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 5%), -3px -3px 10px rgb(0 0 0 / 5%);
+}
+
 .widget h4 {
   background-color: #fbf3d5;
-  border: 1px solid #f1e5bc;
+  margin: 0%;
   padding: 15px;
-  font-size: 0.9rem;
+  border: solid 1px #f1e5bc;
+  font-size: 13px;
 }
-.sidebar-icons {
-  width: 0.7rem;
+
+.right-sidebar-div-1 {
+  background-color: #fdf7e2;
+  padding: 15px;
+  border: solid 1px #f1e5bc;
 }
-.widget p {
-  font-size: 0.7rem;
-  padding-left: 10px;
-  cursor: pointer;
-}
-.widget {
-  box-shadow: 3px 3px 10px rgb(0 0 0/5%), -3px -3px 10px rgb(0 0 0/5%);
-  margin-top: 10px;
-  font-family: var(--font-poppins);
-}
-.right-sidebar {
-  margin: 0 0 15px 0;
-  width: 30vw;
-  max-width: 300px;
-}
+
 .right-sidebar-div-1 .right-sidebar-div-2 {
-  align-items: center;
   display: flex;
-  gap: 10px;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
+
+.right-sidebar-div-1 .right-sidebar-div-2 p {
+  padding-left: 10px;
+  margin-top: 0%;
+  font-size: 13px;
+}
+
 .widget-tags {
-  box-shadow: 3px 3px 10px rgb(0 0 0/5%), -3px -3px 10px rgb(0 0 0/5%);
   margin-top: 40px;
-  font-family: var(--font-poppins);
-  font-size: 0.9rem;
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 5%), -3px -3px 10px rgb(0 0 0 / 5%);
 }
+
 .widget-tags h4 {
-  background-color: #f8f9f9;
-  border: 1px solid #e3e6e8;
-  margin: 0;
+  margin: 0%;
   padding: 15px;
+  background-color: #f8f9f9;
+  border: solid 1px #e3e6e8;
+  font-size: 13px;
 }
+
 .widget-tags-div {
-  align-items: center;
-  border: 1px solid #e3e6e8;
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   justify-content: space-evenly;
+  border: solid 1px #e3e6e8;
   padding: 10px;
-  gap: 15px 10px;
-  cursor: pointer;
 }
+
 .widget-tags-div p {
+  padding: 4px 8px;
   background-color: #e1ecf4;
-  border-radius: 2px;
   color: #39739d;
-  font-size: 0.7rem;
-  padding: 5px;
-  font-family: var(--font-poppins);
+  border-radius: 2px;
+  font-size: 13px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1020px) {
+  .right-sidebar {
+    display: none;
+  }
 }

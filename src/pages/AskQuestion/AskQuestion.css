@@ -1,56 +1,55 @@
 .ask-question {
+  min-height: 80vh;
   background-color: #f1f2f3;
-  min-height: 100vh;
-  font-family: var(--font-poppins);
 }
+
 .ask-ques-container {
   margin: auto;
+  padding: 0px 20px 20px 20px;
   max-width: 1200px;
 }
+
 .ask-ques-container h1 {
-  padding: 80px 0 20px;
+  padding: 80px 0px 20px 0px;
 }
+
 .ask-ques-container form .ask-form-container {
-  background-color: #fff;
-  border-radius: 3px;
-  box-shadow: 0 10px 25px rgb(0 0 0/5%), 0 20px 48px rgb(0 0 0/5%),
-    0 1px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%),
+    0 1px 4px rgb(0 0 0 / 10%);
 }
-.review-btn {
-  background-color: #009dff;
-  border: 1px solid #009dff;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  margin: 50px 0;
+
+.ask-form-container label h4 {
+  margin-bottom: 0%;
+}
+
+.ask-form-container label p {
+  margin: 0%;
+  font-size: 13px;
+  padding: 3px 0px;
+}
+
+.ask-form-container label input,
+.ask-form-container label textarea {
   padding: 10px;
+  border: solid 1px #0000003e;
+  font-family: "Roboto", sans-serif;
+  width: calc(100% - 20px);
+  resize: none;
+}
+
+.review-btn {
+  margin: 50px 0px;
+  padding: 10px;
+  background-color: #009dff;
+  border: solid 1px #009dff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
   transition: 0.3s;
 }
-form {
-  margin: 0;
-}
-.ask-form-container label h4 {
-  margin-bottom: 0;
-}
-.ask-form-container label p {
-  font-size: 0.8rem;
-  margin: 0;
-  padding: 3px 0;
-}
-.ask-form-container label input,
-.ask-form-container label textarea {
-  border: 1px solid #0000003e;
-  font-family: var(--font-poppins);
-  padding: 10px;
-  resize: vertical;
-  width: calc(100% - 20px);
-}
-.ask-form-container label input,
-.ask-form-container label textarea {
-  border: 1px solid #0000003e;
-  font-family: var(--font-poppins);
-  padding: 10px;
-  resize: vertical;
-  width: calc(100% - 20px);
+.review-btn:hover {
+  background-color: #0086d8;
 }

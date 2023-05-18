@@ -1,4 +1,5 @@
 import React from "react";
+
 const Avatar = ({
   children,
   backgroundColor,
@@ -10,14 +11,17 @@ const Avatar = ({
   cursor,
 }) => {
   const style = {
-    backgroundColor,
-    padding: `${py} ${px}`,
+    backgroundColor: backgroundColor,
+    width: px,
+    height: py,
     color: color || "black",
-    borderRadius,
-    fontSize,
-    textAlign: "center",
+    borderRadius: borderRadius,
+    fontSize: fontSize,
     cursor: cursor || null,
     textDecoration: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   };
 
   return <div style={style}>{children}</div>;
