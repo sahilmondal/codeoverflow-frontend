@@ -5,7 +5,7 @@ import decode from "jwt-decode";
 import Breakpoint from "react-socks";
 import search from "../../assets/search-solid.svg";
 import Avatar from "../../components/Avatar/Avatar";
-import "./Navbar.css";
+import "./navbar.css";
 import "./navbarMob.css";
 import { setCurrentUser } from "../../actions/currentUser";
 import LeftSideBar from "../LeftSideBar/LeftSideBar";
