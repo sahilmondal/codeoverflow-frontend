@@ -1,5 +1,5 @@
 import React from "react";
-import "./RightSidebar.css";
+import "./RightSideBar.css";
 import comment from "../../assets/comment-alt-solid.svg";
 import pen from "../../assets/pen-solid.svg";
 import blackLogo from "../../assets/blacklogo.svg";
